@@ -1,1 +1,26 @@
-<paste log output from Kubernetes-mediated prediction, here>
+scien@LAPTOP-0EHI17BA MINGW64 /c/Nanodegree/Project4/dkprojrct4 (master)
+$ ./run_kubernetes.sh
+pod/mlappk created
+NAME     READY   STATUS              RESTARTS   AGE
+mlappk   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+
+scien@LAPTOP-0EHI17BA MINGW64 /c/Nanodegree/Project4/dkprojrct4 (master)
+$ kubectl port-forward pods/mlappk 8080:80
+Forwarding from 127.0.0.1:8080 -> 80
+Forwarding from [::1]:8080 -> 80
+Handling connection for 8080
+
+
+------
+
+scien@LAPTOP-0EHI17BA MINGW64 /c/Nanodegree/Project4/dkprojrct4 (master)
+$ ./make_prediction.sh
+Port: 8080
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   260  100    48  100   212    564   2494 --:--:-- --:--:-- --:--:--  3095{
+  "prediction": [
+    20.35373177134412
+  ]
+}

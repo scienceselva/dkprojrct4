@@ -5,11 +5,13 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=scienceselva/devopsproject4
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login -u scienceselva
 
 # Step 3:
-# Push image to a docker repository
+# Push image to a docker repository and tagged here
+docker push $dockerpath:mlapp

@@ -1,1 +1,10 @@
-<paste log output from Docker prediction, here>
+scien@LAPTOP-0EHI17BA MINGW64 /c/Nanodegree/Project4/dkprojrct4 (master)
+$ ./make_prediction.sh
+Port: 8080
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   260  100    48  100   212    551   2436 --:--:-- --:--:-- --:--:--  3023{
+  "prediction": [
+    20.35373177134412
+  ]
+}
