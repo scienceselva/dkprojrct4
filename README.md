@@ -1,5 +1,4 @@
-[![scienceselva](https://app.circleci.com/pipelines/github/scienceselva/dkprojrct4.svg?style=svg)](https://app.circleci.com/pipelines/github/scienceselva/dkprojrct4)
-
+[![scienceselva](https://circleci.com/gh/scienceselva/dkprojrct4.svg?style=svg)](https://app.circleci.com/pipelines/github/scienceselva/dkprojrct4)
 ## Project Overview
 
 In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
