@@ -39,7 +39,8 @@ jobs:
       - run:
           name: run test
           command: |
-            . venv/bin/activate            
+            . venv/bin/activate   
+            pip3 list | findstr scikit         
             make test
 workflows:
     main:
