@@ -16,7 +16,9 @@ jobs:
             - v1-dependencies-
       - run:
           name: install dependencies
-          command: |                        
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
             echo "------------------> installing dependancies from make file"
             make install
             echo "------------------> installing hadolint"
@@ -24,15 +26,14 @@ jobs:
             chmod +x /bin/hadolint
       - save_cache:
           paths:
-            - ~/.devops
+            - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       # run lint!
       - run:
           name: run lint
           command: |
-            ls
-            echo "------------------> Start linting of the project from make file"
+            . venv/bin/activate
             make lint 
 
 workflows:
