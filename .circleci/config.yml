@@ -40,7 +40,7 @@ jobs:
           name: run test
           command: |
             . venv/bin/activate   
-            pip list | findstr scikit         
+            pip list
             make test
 workflows:
     main:
