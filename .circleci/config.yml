@@ -19,6 +19,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
+            ls
             echo "------------------> installing dependancies from make file"
             make install
             echo "------------------> installing hadolint"
@@ -34,6 +35,7 @@ jobs:
           name: run lint
           command: |
             . venv/bin/activate
+            ls
             make lint 
 
 workflows:
